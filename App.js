@@ -6,17 +6,27 @@
 
 import React, {Component} from 'react';
 import {
-    StyleSheet,
+    StyleSheet, TouchableOpacity,
     View
 } from 'react-native';
-import PersonalBox from './components/personal_box';
+import Personal from './components/personal';
 
 export default class App extends Component<{}> {
+    constructor(props){
+        super(props);
+        this.state={
+              isOnLine : true,
+        };
+    }
+    onClick(){
+        this.state.isOnLine = ! this.state.isOnLine;
+        console.log("isOnLine:" + this.state.isOnLine);
+    };
     render() {
         return (
-            <View style={styles.container}>
-                <PersonalBox></PersonalBox>
-            </View>
+            <TouchableOpacity onPress={this.onClick()} style={styles.container}>
+                <Personal status={false}/>
+            </TouchableOpacity>
         );
     }
 }
