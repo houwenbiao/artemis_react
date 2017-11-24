@@ -9,6 +9,9 @@ import {StyleSheet, View} from 'react-native';
 import Personal from "../components/personal";
 
 export default class PersonalPager extends Component<{}>{
+    static navigationOptions = {
+        title: 'PersonalPager'
+    };
     render() {
         return (
             <View style={styles.container}>
