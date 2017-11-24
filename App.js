@@ -5,28 +5,32 @@
  */
 
 import React, {Component} from 'react';
-import {
-    StyleSheet, TouchableOpacity,
-    View
-} from 'react-native';
-import Personal from './components/personal';
+import {StyleSheet,View} from "react-native";
+import Personal from "./components/personal";
 
 export default class App extends Component<{}> {
-    constructor(props){
-        super(props);
-        this.state={
-              isOnLine : true,
-        };
+    /*render() {
+        let defaultName = 'PersonalPager';
+        let defaultComponent = PersonalPager;
+        return (
+            <Navigator
+                initialRoute={{ name: defaultName, component: defaultComponent }}
+                configureScene={(route) => {
+                    return Navigator.SceneConfigs.VerticalDownSwipeJump;
+                }}
+                renderScene={(route, navigator) => {
+                    let Component = route.component;
+                    return <Component {...route.params} navigator={navigator} />
+                }}
+            />
+        );
     }
-    onClick(){
-        this.state.isOnLine = ! this.state.isOnLine;
-        console.log("isOnLine:" + this.state.isOnLine);
-    };
+}*/
     render() {
         return (
-            <TouchableOpacity onPress={this.onClick()} style={styles.container}>
-                <Personal status={false}/>
-            </TouchableOpacity>
+            <View style={styles.container}>
+                <Personal/>
+            </View>
         );
     }
 }
@@ -37,3 +41,4 @@ const styles = StyleSheet.create({
         backgroundColor: '#F0F0F0',
     },
 });
+
