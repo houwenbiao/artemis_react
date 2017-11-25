@@ -5,24 +5,22 @@
  */
 
 import React, {Component} from 'react';
-import {Button, Image, StyleSheet, View} from 'react-native';
-import Personal from "../components/personal";
+import {Image, StyleSheet, Text, View} from 'react-native';
 
-export default class PersonalPager extends Component<{}> {
+export default class PersonalPager extends Component<{}>{
     static navigationOptions = {
-        tabBarLabel: '趣多多',
+        tabBarLabel: 'E·A·S·Y',
         tabBarIcon: ({ tintColor }) => (
             <Image
-                source={require('../static/img/icon_2.png')}
+                source={require('../static/img/icon_1.png')}
                 style={[styles.icon, {tintColor: tintColor}]}
             />
         ),
     };
-
     render() {
         return (
             <View style={styles.container}>
-                <Personal/>
+                <Text>Easy界面</Text>
             </View>
         );
     }
@@ -31,6 +29,6 @@ export default class PersonalPager extends Component<{}> {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F0F0F0',
+        backgroundColor: '#05F5F5',
     },
 });
