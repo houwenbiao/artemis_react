@@ -6,7 +6,7 @@ import {
     Text, TouchableOpacity,
     View
 } from 'react-native';
-import AndroidToastModule from '../native/android_toast_module'
+import AndroidToastModule from '../../native/android_toast_module'
 export default class PersonalBox extends Component<{}> {
     img_source_id: number;
 
@@ -32,12 +32,12 @@ export default class PersonalBox extends Component<{}> {
 
     render() {
         const img_sources = [
-            require('../static/img/icon_battery.png'),
-            require('../static/img/icon_video.png'),
-            require('../static/img/icon_led.png'),
-            require('../static/img/icon_tips.png'),
-            require('../static/img/icon_amusing.png'),
-            require('../static/img/icon_setting.png'),];
+            require('../../static/img/icon_battery.png'),
+            require('../../static/img/icon_video.png'),
+            require('../../static/img/icon_led.png'),
+            require('../../static/img/icon_tips.png'),
+            require('../../static/img/icon_amusing.png'),
+            require('../../static/img/icon_setting.png'),];
 
         return (
             <TouchableOpacity

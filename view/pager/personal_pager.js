@@ -1,7 +1,7 @@
 /**
  * Author: JackHou
  * Date: 2017/11/24.
- * Description:
+ * Description: 趣多多界面
  */
 
 import React, {Component} from 'react';
@@ -13,7 +13,7 @@ export default class PersonalPager extends Component<{}> {
         tabBarLabel: '趣多多',
         tabBarIcon: ({ tintColor }) => (
             <Image
-                source={require('../static/img/icon_2.png')}
+                source={require('../../static/img/icon_1.png')}
                 style={[styles.icon, {tintColor: tintColor}]}
             />
         ),
@@ -32,5 +32,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F0F0F0',
+    },
+    icon: {
+        marginTop:3,
+        width: 22,
+        height: 22,
     },
 });

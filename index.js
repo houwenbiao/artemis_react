@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import Home from './Home';
 
-AppRegistry.registerComponent('artemis_react', () => App);
+AppRegistry.registerComponent('artemis_react', () => Home);

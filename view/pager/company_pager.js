@@ -1,26 +1,27 @@
 /**
  * Author: JackHou
  * Date: 2017/11/24.
- * Description:
+ * Description: 陪伴界面
  */
 
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 
-export default class PersonalPager extends Component<{}>{
+export default class CompanyPager extends Component<{}>{
     static navigationOptions = {
-        tabBarLabel: 'E·A·S·Y',
+        tabBarLabel: '睡前陪伴',
         tabBarIcon: ({ tintColor }) => (
             <Image
-                source={require('../static/img/icon_1.png')}
+                source={require('../../static/img/icon_4.png')}
                 style={[styles.icon, {tintColor: tintColor}]}
+
             />
         ),
     };
     render() {
         return (
             <View style={styles.container}>
-                <Text>Easy界面</Text>
+                <Text>睡前陪伴界面</Text>
             </View>
         );
     }
@@ -29,6 +30,11 @@ export default class PersonalPager extends Component<{}>{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#05F5F5',
+        backgroundColor: 'blue',
+    },
+    icon: {
+        marginTop:1,
+        width: 22,
+        height: 22,
     },
 });
